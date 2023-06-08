@@ -3,10 +3,10 @@ import Container from '../Layout/Container';
 
 export default function Footer() {
 	return (
-		<footer className="py-[5rem]">
+		<footer className="text-white bg-mirage pt-52 pb-46">
 			<Container>
 				<Col>
-					<h2 className="text-xs uppercase text-center text-metal">footer @2023</h2>
+					<h2 className="text-xs text-center uppercase text-metal">footer @2023</h2>
 				</Col>
 			</Container>
 		</footer>

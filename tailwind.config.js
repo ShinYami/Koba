@@ -16,7 +16,36 @@ const extraColumns = {
 	27: '27',
 };
 
+const colors = {
+	white: '#FFFFFF',
+	dark: '#000000',
+	sun: '#F9BB0C',
+	mirage: '#1D2A35',
+	iron: '#D5D9DD',
+	woodsmoke: '#0B0D0E',
+	athensgray:'#F8F8F9',
+};
+
+const max = px => {
+	return `max(${Math.max(10, px * 0.8)}px,${px / 16}rem)`;
+};
+
 const { fontFamily } = require('tailwindcss/defaultTheme');
+
+const regularSpacing = new Array(450).fill(null).reduce((result, item, i) => {
+	result[i] = i < 4 ? `${i}px` : `${i / 16}rem`;
+	return result;
+}, {});
+
+const largeSpecificSpacing = [545, 583, 600, 700, 758, 1400].reduce((result, item) => {
+	result[item] = `${item / 16}rem`;
+	return result;
+}, {});
+
+const spacing = {
+	...regularSpacing,
+	...largeSpecificSpacing,
+};
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -30,23 +59,75 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['var(--karla)', ...fontFamily.sans],
-				jetbrains: ['var(--jetbrains)', ...fontFamily.sans],
-				karla: ['var(--karla)', ...fontFamily.sans],
-			},
-			colors: {
-				// Using modern `rgb`
-				primary: '#0e0e0e',
-				secondary: '#ffffff',
-				"white": '#ffffff',
-				"purple": '#3f3cbb',
-				"midnight": '#121063',
-				"metal": '#f6a557',
+				sans: ['var(--manrope)', ...fontFamily.sans],
+				bebas: ['var(--bebas)', ...fontFamily.sans],
+				manrope: ['var(--manrope)', ...fontFamily.sans],
 			},
 			gridColumnStart: extraColumns,
 			gridColumnEnd: extraColumns,
 			gridTemplateColumns: {
 				container: '[full-start] minmax(calc(calc(100% - 1440px) / 2), 1fr) [main-start] repeat(24, [col-start] 1fr) [main-end] minmax(calc(calc(100% - 1440px) / 2), 1fr) [full-end]',
+			},
+			colors,
+			spacing,
+			letterSpacing : {
+				tight: '-.02em',
+				zero: '0',
+				one: '.01em',
+				wide: '.02em',
+				wider: '.04em',
+				huge: '.1em',
+			},
+			fontSize: {
+				12: [
+					max(12),
+					{
+						lineHeight: '1',
+					},
+				],
+				14: [
+					max(14),
+					{
+						lineHeight: '1.5',
+					},
+				],
+				18: [
+					max(18),
+					{
+						lineHeight: '1.5',
+					},
+				],
+				20: [
+					max(20),
+					{
+						lineHeight: '1.35',
+					},
+				],
+				24: [
+					max(24),
+					{
+						lineHeight: '1.3',
+						letterSpacing: '-0.02em',	
+					},
+				],
+				32: [
+					max(32),
+					{
+						lineHeight: '1.35',
+					},
+				],
+				48: [
+					max(48),
+					{
+						lineHeight: '1',
+					},
+				],
+				80: [
+					max(80),
+					{
+						lineHeight: '1',
+					},
+				],
 			},
 		},
 	},
