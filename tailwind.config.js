@@ -69,15 +69,6 @@ module.exports = {
 				container: '[full-start] minmax(calc(calc(100% - 1440px) / 2), 1fr) [main-start] repeat(24, [col-start] 1fr) [main-end] minmax(calc(calc(100% - 1440px) / 2), 1fr) [full-end]',
 			},
 			colors,
-			spacing,
-			letterSpacing : {
-				tight: '-.02em',
-				zero: '0',
-				one: '.01em',
-				wide: '.02em',
-				wider: '.04em',
-				huge: '.1em',
-			},
 			fontSize: {
 				12: [
 					max(12),
@@ -128,6 +119,15 @@ module.exports = {
 						lineHeight: '1',
 					},
 				],
+			},
+			spacing,
+			letterSpacing : {
+				tight: '-.02em',
+				zero: '0',
+				one: '.01em',
+				wide: '.02em',
+				wider: '.04em',
+				huge: '.1em',
 			},
 		},
 	},

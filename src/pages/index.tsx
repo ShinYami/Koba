@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import { Lenis, useLenis } from '@studio-freight/react-lenis'
+import { Lenis } from '@studio-freight/react-lenis'
 
 import Cover from '../../public/assets/placeholder.jpg'
 
@@ -18,7 +18,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 
 const Page: NextPage = () => {
-	const lenis = useLenis()
+	// const lenis = useLenis()
 
 	const variants = {
 		initial: {
@@ -30,7 +30,6 @@ const Page: NextPage = () => {
 	}
 
 	const speed = 1.5;
-	
 	const { scrollYProgress } = useScroll();
 	const transform = useTransform(scrollYProgress, [0, 1], [0, -100 * speed]);
 
@@ -49,7 +48,7 @@ const Page: NextPage = () => {
 							initial="intial"
 							animation="animation"
 							style={{ y: transform }}
-							className='bg-white rounded-[30px] relative z-40 overflow-visible'
+							className='bg-white rounded-[30px] relative z-40 overflow-visible -mt-70'
 						>
 							<Service />
 							<About Cover={Cover} />

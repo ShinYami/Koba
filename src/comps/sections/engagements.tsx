@@ -8,7 +8,7 @@ export default function Engagements() {
 		<section className='text-woodsmoke'>
 			<Container>
 				<Col>
-					<small className='font-medium text-12'>Ils nous tiennent à coeur...</small>
+					<small className='font-medium uppercase text-12 tracking-huge'>Ils nous tiennent à coeur...</small>
 					<h2 className='mt-16 mb-40 text-48 font-bebas font-regular'>Nos engagements</h2>
 				</Col> 
 			</Container>
