@@ -13,6 +13,7 @@ import Engagement from '../comps/sections/engagements';
 import Contact from '../comps/components/contact';
 import Footer from '../comps/ui/footer';
 import Grid from '../comps/Layout/Grid';
+import Marquee from '../comps/components/marquee';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -53,7 +54,8 @@ const Page: NextPage = () => {
 							<Service />
 							<About Cover={Cover} />
 							<Solutions />
-							<Engagement />
+							{/* <Engagement /> */}
+							<Marquee />
 							<Contact />
 						</motion.div>
 

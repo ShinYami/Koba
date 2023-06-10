@@ -1,3 +1,11 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+const screens = {
+	...defaultTheme.screens,
+	'sm-max': {max: `${parseInt(defaultTheme.screens.sm) - 1}px`},
+	'lg-max': {max: `${parseInt(defaultTheme.screens.lg) - 1}px`},
+}
+
 const extraColumns = {
 	13: '13',
 	14: '14',
@@ -129,6 +137,7 @@ module.exports = {
 				wider: '.04em',
 				huge: '.1em',
 			},
+			screens,
 		},
 	},
 	plugins: [],

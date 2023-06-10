@@ -16,12 +16,12 @@ export default function Hero({Cover}: HeroProps) {
 						Accueil
 					</span>
 					/
-					<span>
+					<span className=''>
 						À propos
 					</span>
 				</Col>
 			</Container>
-			<Container className="relative z-50 lg:grid-rows-3">
+			<Container className="relative z-50 lg-max:mt-50">
 				<Col colStart={[2]} colEnd={[13]} className='uppercase text-80'>
 					<span className='pb-24 uppercase text-12 tracking-huge'>À propos de</span>
 					<h2 className='uppercase font-regular text-80 font-bebas'>Koba express, votre partenaire logistique</h2>
