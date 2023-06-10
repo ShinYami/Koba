@@ -21,15 +21,15 @@ export default function Hero({Cover}: HeroProps) {
 					</span>
 				</Col>
 			</Container>
-			<Container className="relative z-50 lg-max:mt-50">
-				<Col colStart={[2]} colEnd={[13]} className='uppercase text-80'>
+			<Container className="relative z-50">
+				<Col colStart={[2]} colEnd={[20, 20, 20, 13, 13]} className='uppercase text-80'>
 					<span className='pb-24 uppercase text-12 tracking-huge'>À propos de</span>
-					<h2 className='uppercase font-regular text-80 font-bebas'>Koba express, votre partenaire logistique</h2>
+					<h2 className='uppercase font-regular text-80 font-bebas lg-max:text-60'>Koba express, votre partenaire logistique</h2>
 				</Col>
-				<Col colStart={[15]} colEnd={[26]}>
-					<div className='relative flex flex-col justify-end -top-10'>
+				<Col colStart={[2, 2 , 2, 15, 15]} colEnd={[26]}>
+					<div className='relative flex flex-col justify-end lg:-top-10 lg-max:mt-20'>
 						<p className='flex pb-16 text-18'>Nous sommes une société familiale spécialisée dans le transport de marchandises, tant en Belgique qu’à l’international.</p>
-						<p className='text-14'>Nos responsables jouissent de plusieurs décennies d’expérience dans le service de livraison pour professionnels, le transport express et le stockage sécurisé. Notre objectif est de fournir à nos clients un service logistique sur mesure aussi complet et compétitif que possible.</p>
+						<p className='text-14 lg-max:mt-20'>Nos responsables jouissent de plusieurs décennies d’expérience dans le service de livraison pour professionnels, le transport express et le stockage sécurisé. Notre objectif est de fournir à nos clients un service logistique sur mesure aussi complet et compétitif que possible.</p>
 					</div>
 				</Col>
 			</Container>

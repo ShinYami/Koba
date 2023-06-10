@@ -121,6 +121,12 @@ module.exports = {
 						lineHeight: '1',
 					},
 				],
+				60: [
+					max(60),
+					{
+						lineHeight: '1',
+					},
+				],
 				80: [
 					max(80),
 					{
