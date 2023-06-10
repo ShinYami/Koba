@@ -133,6 +133,12 @@ module.exports = {
 						lineHeight: '1',
 					},
 				],
+				120: [
+					max(120),
+					{
+						lineHeight: '1',
+					}
+				],
 			},
 			spacing,
 			letterSpacing : {

@@ -54,8 +54,8 @@ const Page: NextPage = () => {
 							<Service />
 							<About Cover={Cover} />
 							<Solutions />
-							{/* <Engagement /> */}
-							<Marquee />
+							<Engagement />
+							{/* <Marquee /> */}
 							<Contact />
 						</motion.div>
 
