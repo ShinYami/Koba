@@ -30,6 +30,7 @@ const colors = {
 	sun: '#F9BB0C',
 	mirage: '#1D2A35',
 	iron: '#D5D9DD',
+	pickledbluewood: '#2D4152',
 	woodsmoke: '#0B0D0E',
 	athensgray:'#F8F8F9',
 };
@@ -90,6 +91,12 @@ module.exports = {
 						lineHeight: '1.5',
 					},
 				],
+				16: [
+					max(16),
+					{
+						lineHeight: '1.5',
+					},
+				],
 				18: [
 					max(18),
 					{
@@ -131,6 +138,12 @@ module.exports = {
 					max(80),
 					{
 						lineHeight: '1',
+					},
+				],
+				100: [
+					max(100),
+					{
+						lineHeight: '1.5',
 					},
 				],
 				120: [

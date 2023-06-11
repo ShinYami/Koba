@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+
 import { useRef } from 'react';
 import Col from '../Layout/Col';
 import Container from '../Layout/Container';
@@ -9,7 +9,10 @@ import EngagementCard from '../components/engagementCard';
 
 export default function Engagements() {
 	const section = useRef(null);
-	const isInView = useInView(section, { once: false });
+	const isInView = useInView(section, { 
+		once: true,
+		margin: '-150px 0px',
+	});
 
 	// console.log(isInView);
 
@@ -24,12 +27,14 @@ export default function Engagements() {
 
 			<Container>
 				<Col>
-					<ul className='grid grid-cols-1 lg:grid-cols-3 gap-x-24 gap-y-24' ref={section}>
+					<ul className='grid grid-cols-1 lg:grid-cols-3 gap-x-20 gap-y-24' ref={section}>
 						{[1,2,3].map((i) => (
-							<EngagementCard key={i} style={{
+							<EngagementCard key={i} index={i} style={{
 								i: --i,
 								opacity: isInView ? 1 : 0,
-								transition: "opacity 0.5s ease-in-out",
+								transform: isInView ? "translateY(0)" : "translateY(100px)",
+								// transformOrigin: "center",
+								transition: "all 0.5s ease-in-out",
 								transitionDelay: `${i * 0.1}s`
 							}}/>
 						))}

@@ -1,6 +1,6 @@
 import Col from '../Layout/Col';
 import Container from '../Layout/Container';
-
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 
 export type HeroProps = {
@@ -8,6 +8,19 @@ export type HeroProps = {
 }
 
 export default function Hero({Cover}: HeroProps) {
+	const variants = {
+		initial: {
+		  opacity: 1
+		},
+		animation: {
+		  opacity: .5
+		}
+	}
+	
+	const speed = 1.5;
+	const { scrollYProgress } = useScroll();
+	const transform = useTransform(scrollYProgress, [0, 1], [0, 200 * speed]);
+
 	return (
 		<header className='relative z-20 pb-110 pt-116'>
 			<Container className='relative z-50'>
@@ -33,13 +46,19 @@ export default function Hero({Cover}: HeroProps) {
 					</div>
 				</Col>
 			</Container>
-			<figure className="absolute inset-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:z-20 before:bg-mirage before:opacity-20">
+			<motion.figure 
+				className="absolute inset-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:z-20 before:bg-mirage before:opacity-20"
+				variants={variants}
+				initial="intial"
+				animation="animation"
+				style={{ y: transform }}
+			>
 				<Image
 					className='absolute inset-0 z-10 object-cover w-full h-full'
 					src={Cover}
 					alt={'alt'}
 				/>
-			</figure>
+			</motion.figure>
 		</header>
 	)
 }

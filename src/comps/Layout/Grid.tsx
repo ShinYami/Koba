@@ -22,7 +22,7 @@ export default function Grid() {
 	// Press G to toggle the grid
 	return (
 		<Container className={classNames(
-			'gridContainer h-screen w-full fixed opacity-60 inset-0 origin-top pointer-events-none z-10',
+			'gridContainer h-screen w-full fixed opacity-60 inset-0 origin-top pointer-events-none z-50',
 			{ 'grid-visible': !isVisible }
 		)}>
 			{Array.from(Array(gridColumns).keys()).map((i) => (

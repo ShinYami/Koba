@@ -20,19 +20,9 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Page: NextPage = () => {
 	// const lenis = useLenis()
-
-	const variants = {
-		initial: {
-		  opacity: 0
-		},
-		animation: {
-		  opacity: 1
-		}
-	}
-
 	const speed = 1.5;
 	const { scrollYProgress } = useScroll();
-	const transform = useTransform(scrollYProgress, [0, 1], [0, -100 * speed]);
+	// const transform = useTransform(scrollYProgress, [0, 1], [0, -100 * speed]);
 
 	return (
 		<>
@@ -45,10 +35,9 @@ const Page: NextPage = () => {
 					<main className="min-h-screen bg-mirage selection:bg-sun selection:text-mirage" id="#content">
 						<Hero Cover={Cover} />
 						<motion.div
-							variants={variants}
 							initial="intial"
 							animation="animation"
-							style={{ y: transform }}
+							// style={{ y: transform }}
 							className='bg-white rounded-[30px] relative z-40 overflow-visible -mt-70'
 						>
 							<Service />
@@ -58,7 +47,6 @@ const Page: NextPage = () => {
 							{/* <Marquee /> */}
 							<Contact />
 						</motion.div>
-
 					</main>
 					<Footer />
 				</div>
