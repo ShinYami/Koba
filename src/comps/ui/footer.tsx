@@ -21,9 +21,19 @@ export default function Footer() {
 	// 	});
 	// }, []);
 
+	const elements = [
+		'Koba messagerie',
+		'Koba express',
+		'Koba stockage',
+	]
+
 	return (
 		<footer className="sticky bottom-0 left-0 right-0 text-white bg-mirage pt-52 pb-46">
-			<Marquee baseVelocity={-2}>Koba messagerie</Marquee>
+			<Marquee baseVelocity={-2}>
+				{elements.map((element, i) => (
+					<span key={i} className="block mr-100">{element}</span>
+				))}
+			</Marquee>
 			<Container className='pt-50'>
 				<Col>
 					<div 

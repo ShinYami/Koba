@@ -22,7 +22,7 @@ export default function Hero({Cover}: HeroProps) {
 	const transform = useTransform(scrollYProgress, [0, 1], [0, 200 * speed]);
 
 	return (
-		<header className='relative z-20 pb-110 pt-116'>
+		<motion.header 	style={{ y: transform }}  className='relative z-20 pb-110 pt-116'>
 			<Container className='relative z-50'>
 				<Col className='!flex flex-row gap-x-16 mb-98 text-12 tracking-huge' colStart={[2]} colEnd={[26]}>
 					<span>
@@ -59,6 +59,6 @@ export default function Hero({Cover}: HeroProps) {
 					alt={'alt'}
 				/>
 			</motion.figure>
-		</header>
+		</motion.header>
 	)
 }

@@ -5,6 +5,7 @@ import { Lenis } from '@studio-freight/react-lenis'
 
 import Cover from '../../public/assets/placeholder.jpg'
 
+import SkipContent from '../comps/ui/skipContent';
 import Hero from '../comps/sections/hero';
 import Service from '../comps/sections/service';
 import About from '../comps/sections/about';
@@ -32,6 +33,7 @@ const Page: NextPage = () => {
 			</Head>
 			<Lenis root>
 				<div>
+					{/* <SkipContent /> */}
 					<main className="min-h-screen bg-mirage selection:bg-sun selection:text-mirage" id="#content">
 						<Hero Cover={Cover} />
 						<motion.div
